@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Manage your tasks efficiently</p>
+        </header>
+
+        <!-- Task Input Section -->
+        <section class="input-section">
+            <h2>Add New Task</h2>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <select id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+        </section>
+
+        <!-- Task Statistics -->
+        <section class="stats-section">
+            <h2>Task Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <span id="totalTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <span id="completedTasks">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending</h3>
+                    <span id="pendingTasks">0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task List -->
+        <section class="tasks-section">
+            <h2>Your Tasks</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </section>
+
+        <!-- Demo Controls -->
+        <section class="demo-section">
+            <h2>JavaScript Demo Controls</h2>
+            <div class="demo-buttons">
+                <button id="demoVariables">Demo Variables</button>
+                <button id="demoLoops">Demo Loops</button>
+                <button id="demoFunctions">Demo Functions</button>
+                <button id="clearAll">Clear All Tasks</button>
+            </div>
+            <div id="demoOutput" class="demo-output">
+                <!-- Demo output will appear here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
